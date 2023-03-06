@@ -1,2 +1,5 @@
-package za.ac.mycput.dao;public class AccountDAO {
+package za.ac.mycput.dao;
+
+public class AccountDAO {
+
 }

@@ -2,16 +2,16 @@ package za.ac.mycput.domain;
 
 import java.util.Objects;
 
-public class Accounts {
+public class Account {
     private String accountNumber;
     private String username;
     private String email;
     private String password;
 
-    public Accounts() {
+    public Account() {
     }
 
-    public Accounts(Builder builder) {
+    public Account(Builder builder) {
         this.accountNumber = builder.accountNumber;
         this.username = builder.username;
         this.email = builder.email;
@@ -38,8 +38,8 @@ public class Accounts {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Accounts accounts = (Accounts) o;
-        return Objects.equals(accountNumber, accounts.accountNumber) && Objects.equals(username, accounts.username) && Objects.equals(email, accounts.email) && Objects.equals(password, accounts.password);
+        Account account = (Account) o;
+        return Objects.equals(accountNumber, account.accountNumber) && Objects.equals(username, account.username) && Objects.equals(email, account.email) && Objects.equals(password, account.password);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class Accounts {
 
     @Override
     public String toString() {
-        return "Accounts{" +
+        return "Account{" +
                 "accountNumber='" + accountNumber + '\'' +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
@@ -85,16 +85,16 @@ public class Accounts {
         }
 
         // builder copy method
-        public Builder copy(Accounts accounts) {
-            this.accountNumber = accounts.accountNumber;
-            this.username = accounts.username;
-            this.email = accounts.email;
-            this.password = accounts.password;
+        public Builder copy(Account account) {
+            this.accountNumber = account.accountNumber;
+            this.username = account.username;
+            this.email = account.email;
+            this.password = account.password;
             return this;
         }
-        
-        public Accounts build() {
-            return new Accounts(this);
+
+        public Account build() {
+            return new Account(this);
         }
     }
 }
